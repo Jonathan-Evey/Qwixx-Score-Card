@@ -280,9 +280,11 @@ body {
 }
 
 @media (max-width: 700px) {
-  .App {
+  body {
     height: 100vw;
     width: 100vh;
+  }
+  .App {
     transform: rotate(90deg);
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr 1.25fr;
