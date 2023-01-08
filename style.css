@@ -280,6 +280,10 @@ body {
 }
 
 @media (max-width: 700px) {
+  body {
+    width: 100vw;
+    overflow-x: hidden;
+  }
   .App {
     height: 100vw;
     width: 100vh;
@@ -333,5 +337,11 @@ body {
     width: auto;
     height: auto;
     aspect-ratio: 1 / 1;
+  }
+}
+
+@media (max-width: 350px) {
+  body {
+    overflow-x: auto;
   }
 }
