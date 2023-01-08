@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 *,
@@ -199,8 +200,8 @@ body {
 }
 
 .container.no-play-btns {
+  display: flex;
   padding-inline: 0.25rem;
-  padding-inline-end: 0.25rem;
 }
 
 .btn.no-play {
@@ -280,6 +281,57 @@ body {
 
 @media (max-width: 700px) {
   .App {
+    height: 100vw;
+    width: 100vh;
     transform: rotate(90deg);
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1.25fr;
+  }
+  .grid.color-row.container {
+    width: auto;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+  .btn.play-option {
+    margin-block: auto;
+    aspect-ratio: 1/1;
+  }
+  .card-bottom {
+    display: grid;
+    grid-template-columns: 7.5fr 3.5fr;
+    place-content: center;
+  }
+  .row.card.score {
+    flex-grow: 2;
+  }
+  .box {
+    flex-grow: 1;
+    width: auto;
+    height: auto;
+    min-height: 50px;
+    min-width: 60px;
+    aspect-ratio: 1.25/1;
+  }
+  .box.total {
+    width: auto;
+    min-width: 75px;
+    aspect-ratio: 1.25/1;
+  }
+  .container.no-play-btns {
+    width: 100%;
+    flex-grow: 1;
+    justify-content: space-evenly;
+  }
+  .container.no-play > h3 {
+    margin-block-end: 0.25rem;
+  }
+  .btn.no-play {
+    max-height: 50px;
+    min-height: 40px;
+    min-width: 40px;
+    max-height: 50px;
+    width: auto;
+    height: auto;
+    aspect-ratio: 1 / 1;
   }
 }
